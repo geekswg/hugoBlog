@@ -39,7 +39,7 @@ border-animation="borderFlash"
 
 {{< friend
 name="PC实用破解软件"
-url="https://geekswg.lanzoui.com/b01hj1vch"
+url="https://geekswg.lanzoui.com/b01hj6pva"
 logo="https://www.lanzou.com/favicon.ico"
 word="密码:3651"
 primary-color="blue"
