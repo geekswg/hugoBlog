@@ -24,7 +24,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.3 #使用peaceiris开发的actions-gh-pages
         with:
           personal_token: ${{ secrets.blog }} 
-          external_repository: https://github.com/geekswg/geekswg.github.io.git #用来发布博客的公有仓库
+          external_repository: geekswg.github.io #用来发布博客的公有仓库
           publish_branch: main
           publish_dir: ./public
           cname: geekswg.github.io #填写你的域名
