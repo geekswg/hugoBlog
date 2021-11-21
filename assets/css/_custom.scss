@@ -1,0 +1,208 @@
+// ==============================
+// Custom style
+// 自定义样式
+// ==============================
+
+/* 目录 */
+nav#TableOfContents ol {
+  padding-inline-start: 30px;
+
+  & ol {
+      padding-inline-start: 25px;
+      display: none;
+  }
+
+  & li.has-active ol {
+      display: block;
+  }
+}
+
+.archive-item-date2 {
+  color: #a9a9b3;
+}
+
+
+/* 子菜单栏 */
+.dropdown {
+    display: inline-block;
+  }
+  
+  /* 子菜单的内容 (默认隐藏) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    line-height: 1.3rem;
+  }
+  
+  /* 子菜单的链接 */
+  .dropdown-content a {
+    padding: 10px 18px 10px 14px;
+    text-decoration: none;
+    display: block;
+    & i {
+      margin-right: 3px;
+    }
+  }
+  
+  /* 鼠标移上去后修改子菜单链接颜色 */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  /* 在鼠标移上去后显示子菜单 */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  @media screen and (max-width: 680px) {
+      .dropdown {
+        display: inline;
+      }
+    .dropdown:hover .dropdown-content {
+      display: inline;
+      z-index: 1;
+      margin-top: -2em;
+      margin-left: 3em;
+    }
+    .dropdown-content a:hover {
+      background-color: transparent;
+    }
+  }
+  
+
+  /* Github Corner */
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+	0%,100% {
+		transform: rotate(0)
+	}
+
+	20%,60% {
+		transform: rotate(-25deg)
+	}
+
+	40%,80% {
+		transform: rotate(10deg)
+	}
+}
+
+@media (max-width:500px) {
+	.github-corner:hover .octo-arm {
+		animation: none
+	}
+
+	.github-corner .octo-arm {
+		animation: octocat-wave 560ms ease-in-out
+	}
+}
+
+
+/* 拉姆蕾姆回到顶部或底部按钮 */
+.sidebar_wo {
+    position:fixed;
+    line-height:0;
+    bottom:0;
+    z-index:1000
+}
+#leimu {
+    left:0;
+    -webkit-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+    -webkit-transform:translate(-7px,7px);
+    -ms-transform:translate(-7px,7px);
+    transform:translate(-7px,7px)
+}
+#lamu {
+    -webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;
+    -webkit-transform:translate(7px,7px);
+    -ms-transform:translate(7px,7px);
+    transform:translate(7px,7px);
+    right:0
+}
+#leimu:hover {
+    -webkit-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+    transform:translate(0,0)
+}
+#lamu:hover {
+    -webkit-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+    transform:translate(0,0)
+}
+.sidebar_wo img {
+    cursor:pointer;
+}
+@media only screen and (max-width:1024px) {
+    .sidebar_wo{display:none}
+}
+
+
+/* 搜索页面 */
+.search {
+  position: relative;
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
+  width: 57.5%;
+  margin: 0 auto;
+  background: white;
+  opacity: .95;
+}
+[theme=dark] .search {
+  background: #3a3535;
+}
+
+[theme=dark] .search header,
+.search header {
+  background-color: #f8f8f8;
+}
+
+[theme=dark] .search header:hover,
+.search header:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.search header h1 {
+  padding-left: 1rem;
+  background: white;
+}
+[theme=dark] .search header h1 {
+  background: #3a3535;
+}
+
+[theme=dark] .search input,
+.search input {
+height: initial;
+  width: initial;
+  color: initial;
+background-color: white;
+margin: 0 0 0 1rem;
+border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+-webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.search #search-results {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+[theme=dark] a:active, [theme=dark] a:hover {
+  color: #2d96bd;
+}
+
+.search hr {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

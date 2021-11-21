@@ -1,0 +1,14 @@
+{{ if .IsNamedParams }}
+{{ $defaultImg := "https://sdn.geekzu.org/avatar/d41d8cd98f00b204e9800998ecf8427e?d=retro" }}
+	<a target="_blank" href={{ .Get "url" }} title={{ .Get "name" }}---{{ .Get "word" }} class="friend url">
+	  <div class="friend block whole {{ .Get "primary-color" | default "default"}} {{ .Get "border-animation" | default "shadow"}}">
+		<div class="friend block left">
+		  <img class="friend logo {{ .Get "img-animation" | default "rotate"}}" src={{ .Get "logo" }} onerror="this.src='{{ $defaultImg }}'" />
+		</div>
+		<div class="friend block right">
+		  <div class="friend name">{{ .Get "name" }}</div>
+		  <div class="friend info">"{{ .Get "word" }}"</div>
+		</div>
+	  </div>
+	</a>
+{{ end }}

@@ -1,0 +1,4 @@
+{{ $options := (dict "targetPath" "/css/friend.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "css/friend.scss" | resources.ToCSS $options }}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
