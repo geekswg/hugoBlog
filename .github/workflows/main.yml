@@ -1,0 +1,31 @@
+name: Deploy Blog #名字随便起
+
+on:
+  push:
+    branches:
+      - master #源码所在分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Hugo #安装hugo
+        uses: peaceiris/actions-hugo@v2.4.13 #使用peaceiris开发的actions-hugo
+        with:
+          hugo-version: 'latest' #可以指定版本号，也可以使用latest表示最新版
+          extended: true #支持hugo的扩展版
+
+      - name: Build #使用hugo构建博客
+        run: hugo --gc --minify
+
+      - name: Deploy #部署博客
+        uses: peaceiris/actions-gh-pages@v3.7.3 #使用peaceiris开发的actions-gh-pages
+        with:
+          personal_token: ${{ secrets.blog }} 
+          external_repository: https://github.com/geekswg/geekswg.github.io.git #用来发布博客的公有仓库
+          publish_branch: main
+          publish_dir: ./public
+          cname: geekswg.github.io #填写你的域名
+          commit_message: ${{ github.event.head_commit.message }}
