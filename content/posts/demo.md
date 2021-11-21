@@ -28,4 +28,18 @@ tags: ["test"]
 
 [PC实用破解软件](https://geekswg.lanzoui.com/b01hj6pva)	https://geekswg.lanzoui.com/b01hj6pva
 密码:3651
+## 添加密码
 
+```
+title: "Demo"
+subtitle: "测试密码-test"
+password: test
+date: 2021-11-14T23:01:58+08:00
+lastmod: 2021-11-14T23:01:58+08:00
+draft: false
+toc:
+  enable: true
+weight: false
+categories: ["test"]
+tags: ["test"]
+```
