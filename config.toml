@@ -8,6 +8,7 @@ languageCode = "zh-CN"
 hasCJKLanguage = true
 # 主题 添加搜索插件
 theme = ["hugo-search-fuse-js","LoveIt"]
+
 # 网站标题
 title = "Geekswgの博客 - 在阅读中遇见自己"
 # 是否使用 robots.txt
