@@ -33,9 +33,13 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./public
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          #publish_dir: ./public
+          #external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
+          #publish_branch: main
+          #commit_message: ${{ github.event.head_commit.message }}
+          
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
-          publish_branch: main
-          cname: geekswg.github.io #填写你的域名
-          commit_message: ${{ github.event.head_commit.message }}
+          publish_branch: main  # default: gh-pages
+          publish_dir: ./public
