@@ -1,4 +1,4 @@
-name: Deploy Blog #名字随便起
+name: 自动部署hugoBlog-Deploy Blog #名字随便起
 
 on:
   push:
