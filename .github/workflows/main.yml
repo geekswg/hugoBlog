@@ -28,8 +28,8 @@ jobs:
           #external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
           #publish_branch: main
           #commit_message: ${{ github.event.head_commit.message }}
-          
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
           publish_branch: main  # default: gh-pages
           publish_dir: ./public
