@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -19,13 +19,17 @@ jobs:
 
       - name: Build #使用hugo构建博客
         run: hugo --gc --minify
-
+          
       - name: Deploy #部署博客
-        uses: peaceiris/actions-gh-pages@v3.7.3 #使用peaceiris开发的actions-gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.blog }} 
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          #publish_dir: ./public
+          #external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
+          #publish_branch: main
+          #commit_message: ${{ github.event.head_commit.message }}
+          
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
-          publish_branch: main
+          publish_branch: main  # default: gh-pages
           publish_dir: ./public
-          cname: geekswg.github.io #填写你的域名
-          commit_message: ${{ github.event.head_commit.message }}
