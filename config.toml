@@ -78,22 +78,7 @@ enableEmoji = true
         url = "/about/"
         title = ""
         weight = 5
-      [[languages.zh-cn.menu.main]]
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw'></i>"
-        post = "_blank"
-        name = ""
-        url = "https://github.com/geekswg"
-        title = "GitHub"
-        weight = 6
-      [[languages.zh-cn.menu.main]]
-        identifier = "qq"
-        pre = "<i class='fab fa-qq fa-spin'></i>"
-        post = "_blank"
-        name = ""
-        url = "http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes"
-        title = "QQ联系我"
-        weight = 6
+      
       [[languages.zh-cn.menu.main]]
         identifier = "friends"
         pre = "<i class='fas fa-user-friends'></i>"
@@ -101,8 +86,34 @@ enableEmoji = true
         name = "友链"
         url = "/friends/"
         title = ""
-        weight = 7
+        weight = 6
+      
+      [[languages.zh-cn.menu.main]]
+        pre = "<i class='fas fa-fw fa-search'></i>"
+        name = "搜索"
+        title = "站内搜索"
+        weight = 6
+        identifier = "search"
+        url = "/search/"
 
+      [[languages.zh-cn.menu.main]]
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw'></i>"
+        post = "_blank"
+        name = ""
+        url = "https://github.com/geekswg"
+        title = "GitHub"
+        weight = 7
+      
+      [[languages.zh-cn.menu.main]]
+        identifier = "qq"
+        pre = "<i class='fab fa-qq fa-spin'></i>"
+        post = "_blank"
+        name = ""
+        url = "http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes"
+        title = "QQ联系我"
+        weight = 7
+      
       [[languages.zh-cn.menu.main]]
         identifier = "website"
         pre = "<i class='fa fa-cog fa-spin fa-fw'></i>"
@@ -121,12 +132,7 @@ enableEmoji = true
         title = ""
         weight = 1
         
-      [[languages.zh-cn.menu.main]]
-        pre = "<i class='fas fa-fw fa-search'></i>"
-        name = "搜索"
-        weight = 7
-        identifier = "search"
-        url = "/search/"
+      
 
     [languages.zh-cn.params]
       # 网站描述
@@ -178,7 +184,7 @@ enableEmoji = true
           # Gravatar 邮箱，用于优先在主页显示的头像
           gravatarEmail = ""
           # 主页显示头像的 URL
-          avatarURL = "/images/avatar.png"
+          avatarURL = "/images/favicon.ico"
           # 主页显示的网站标题 (支持 HTML 格式)
           title = ""
           # 主页显示的网站副标题
