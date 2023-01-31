@@ -33,7 +33,7 @@ jobs:
           #commit_message: ${{ github.event.head_commit.message }}
           # github_token: ${{ secrets.GITHUB_TOKEN }}
           # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }} #在 external_repository新建一个secrets
           external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
           publish_branch: main  # default: gh-pages
           publish_dir: ./public
