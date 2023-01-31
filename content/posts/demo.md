@@ -1,7 +1,7 @@
 ---
 title: "Demo"
 subtitle: "测试密码-test"
-password: test1
+password: 123
 date: 2021-11-14T23:01:58+08:00
 lastmod: 2021-11-14T23:01:58+08:00
 draft: false
