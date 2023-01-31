@@ -9,10 +9,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo #安装hugo
-        uses: peaceiris/actions-hugo@v2.4.13 #使用peaceiris开发的actions-hugo
+        uses: peaceiris/actions-hugo@v2 #使用peaceiris开发的actions-hugo
         with:
           hugo-version: 'latest' #可以指定版本号，也可以使用latest表示最新版
           extended: true #支持hugo的扩展版
