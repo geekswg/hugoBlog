@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -27,5 +27,15 @@ jobs:
           external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
           publish_branch: main
           publish_dir: ./public
+          cname: geekswg.github.io #填写你的域名
+          commit_message: ${{ github.event.head_commit.message }}
+          
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./public
+          external_repository: geekswg/geekswg.github.io #用来发布博客的公有仓库
+          publish_branch: main
           cname: geekswg.github.io #填写你的域名
           commit_message: ${{ github.event.head_commit.message }}
