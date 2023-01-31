@@ -61,23 +61,25 @@ enableEmoji = true
         url = "/tags/"
         title = ""
         weight = 2
+      [[languages.zh-cn.menu.main]]
+        parent = "posts"
+        identifier = "about"
+        pre = "<i class='fas fa-fw fa-at'></i>"
+        post = ""
+        name = "关于"
+        url = "/about/"
+        title = ""
+        weight = 3
       
       [[languages.zh-cn.menu.main]]
         identifier = "documentation"
-        pre = ""
+        pre = "<i class='fas fa-fw fa-book'></i>"
         name = "文档"
         url = "/categories/documentation/"
         title = ""
         weight = 4
 
-      [[languages.zh-cn.menu.main]]
-        identifier = "about"
-        pre = ""
-        post = ""
-        name = "关于"
-        url = "/about/"
-        title = ""
-        weight = 5
+      
       
       [[languages.zh-cn.menu.main]]
         identifier = "friends"
@@ -91,7 +93,7 @@ enableEmoji = true
       [[languages.zh-cn.menu.main]]
         pre = "<i class='fas fa-fw fa-search'></i>"
         name = "搜索"
-        title = "站内搜索"
+        title = "站内"
         weight = 6
         identifier = "search"
         url = "/search/"
@@ -107,7 +109,7 @@ enableEmoji = true
       
       [[languages.zh-cn.menu.main]]
         identifier = "qq"
-        pre = "<i class='fab fa-qq fa-spin'></i>"
+        pre = "<i class='fab fa-qq'></i>"
         post = "_blank"
         name = ""
         url = "http://wpa.qq.com/msgrd?v=3&uin=1101303970&site=qq&menu=yes"
@@ -184,7 +186,7 @@ enableEmoji = true
           # Gravatar 邮箱，用于优先在主页显示的头像
           gravatarEmail = ""
           # 主页显示头像的 URL
-          avatarURL = "/images/favicon.ico"
+          avatarURL = "/images/avatar.png"
           # 主页显示的网站标题 (支持 HTML 格式)
           title = ""
           # 主页显示的网站副标题
@@ -308,13 +310,13 @@ enableEmoji = true
     [params.header.title]
       # URL of the LOGO
       # LOGO 的 URL
-      logo = "/images/avatar.png"
+      logo = ""
       # title name
       # 标题名称
       name = "毕少侠也在江湖"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
+      pre = "<i class='fab fa-github-alt fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
