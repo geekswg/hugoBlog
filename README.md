@@ -4,4 +4,4 @@ hugo 博客
 
 > https://geekswg.github.io/ 博客源码 仓库 
 
-弃用
+已经弃用
